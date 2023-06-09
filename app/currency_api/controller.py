@@ -1,7 +1,7 @@
 from typing import Optional
 
 from app.currency_api.client import Client
-from app.config import config
+from config import config
 
 
 class Controller:

@@ -1,6 +1,6 @@
 # Git
 .git
-.gitignore
+../.gitignore
 
 # CI
 .codeclimate.yml
@@ -8,8 +8,8 @@
 .taskcluster.yml
 
 # Docker
-docker-compose.yaml
-Dockerfile
+app/docker-compose.yaml
+app/Dockerfile
 .docker
 
 # Byte-compiled / optimized / DLL files
@@ -70,7 +70,7 @@ docs/_build/
 target/
 
 # Virtual environment
-.env/
+../.env/
 .venv/
 venv/
 

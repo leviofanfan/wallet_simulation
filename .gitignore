@@ -1,7 +1,8 @@
 .pytest_cache
-app/.env
-my_venv
+../.env
+venv
 app/.pytest_cache
 copy_data
 smth_important
 .idea/
+.env

@@ -9,7 +9,7 @@ load_dotenv()
 
 class Settings(BaseSettings):
     BASE_DIR = os.path.dirname(os.path.abspath(__name__))
-    TEST_DIR = os.path.join(BASE_DIR, "tests")
+    TEST_DIR = os.path.join(BASE_DIR, "app/tests")
 
     DB_USERNAME: str = os.environ.get("DB_USERNAME", "")
     DB_PASSWORD: str = os.environ.get("DB_PASSWORD", "")
@@ -17,7 +17,7 @@ class Settings(BaseSettings):
     PORT: int = os.environ.get("PORT", 3000)
 
     DB_HOST: str = os.environ.get("HOST", "localhost")
-    DB_PORT: int = os.environ.get("DB_PORT", 8000)
+    DB_PORT: int = os.environ.get("DB_PORT", 5432)
     DB_NAME: str = os.environ.get("DB_NAME", "online_wallet")
 
     CURRENCY_EXCHANGE_API_URL: str = os.environ.get("CURRENCY_EXCHANGE_API_URL", "")

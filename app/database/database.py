@@ -1,7 +1,7 @@
 from sqlalchemy import URL, create_engine, MetaData
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from app.config import config
+from config import config
 
 url_object = URL.create(
     "postgresql",

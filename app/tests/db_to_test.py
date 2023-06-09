@@ -3,9 +3,9 @@ from sqlalchemy.orm import sessionmaker
 from starlette.testclient import TestClient
 
 from app.api import get_db
-from app.config import config
+from config import config
 from app.database.database import Base, engine
-from app.main import app
+from main import app
 
 url_object = URL.create(
     "postgresql+psycopg2",
