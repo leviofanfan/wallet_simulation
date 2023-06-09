@@ -4,7 +4,7 @@ from typing import Optional
 
 from pydantic import BaseModel, EmailStr, validator
 
-from app.api.costants import DATETIME_FORMAT
+from app.api.constants import DATETIME_FORMAT
 
 WalletNumberType = str
 WalletBalanceType = float

@@ -5,7 +5,7 @@ from fastapi import HTTPException
 from starlette import status
 
 from app.api.schemas import WalletNumberType
-from app.api.costants import DATETIME_FORMAT
+from app.api.constants import DATETIME_FORMAT
 from app.database.database import Session
 from app.database.models import TransferLog
 

@@ -6,7 +6,7 @@ from fastapi import APIRouter, Body, Depends, Query
 from starlette import status
 
 from .dependencies import get_db
-from .costants import USER_CREATE_EXAMPLE, DATETIME_FORMAT, EARLIEST_DATETIME
+from .constants import USER_CREATE_EXAMPLE, DATETIME_FORMAT, EARLIEST_DATETIME
 from .schemas import UserCreate, WalletCreate, WalletDB, WalletNumberType, WalletBalanceType, UserDB, AddMoney, \
     TransferMoney, TransferLogDB
 from .utils import validation_user_id, validation_wallet_number, email_validation_if_exists, \

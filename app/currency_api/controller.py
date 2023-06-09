@@ -3,6 +3,8 @@ from typing import Optional
 from app.currency_api.client import Client
 from app.config import get_config
 
+config = get_config()
+
 
 class Controller:
     def __init__(self, rates: Optional[dict] = None):
@@ -12,9 +14,9 @@ class Controller:
 
     @staticmethod
     def get_rates() -> dict:
-        client = Client(currency_exchange_api_key=get_config().currency_exchange_api_key)
+        client = Client(currency_exchange_api_key=config.CURRENCY_EXCHANGE_API_KEY)
         if client.latest_currency_rates is None:
-            client.get_latest_currency_rates(get_config().currency_exchange_api_url)
+            client.get_latest_currency_rates(config.CURRENCY_EXCHANGE_API_URL)
         return client.latest_currency_rates
 
     def update_rates(self):
@@ -22,10 +24,9 @@ class Controller:
             self.rates = self.get_rates()
 
     def _update_exchange_rates(self, currency_sender: str, currency_receiver: str):
-        client = Client(currency_exchange_api_key=get_config().currency_exchange_api_key)
-
+        client = Client(currency_exchange_api_key=config.CURRENCY_EXCHANGE_API_KEY)
         if client.latest_currency_rates is None:
-            client.get_latest_currency_rates(get_config().currency_exchange_api_url)
+            client.get_latest_currency_rates(config.CURRENCY_EXCHANGE_API_URL)
 
         receiver_rate_by_dollar = client.latest_currency_rates.get(currency_receiver)
         sender_rate_by_dollar = client.latest_currency_rates.get(currency_sender)
