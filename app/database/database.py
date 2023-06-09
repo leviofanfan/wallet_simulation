@@ -1,19 +1,16 @@
 from sqlalchemy import URL, create_engine, MetaData
 from sqlalchemy.orm import declarative_base, sessionmaker
 
-from app.config import get_config
-
-
+from app.config import config
 
 url_object = URL.create(
     "postgresql",
-    username=get_config().db_username,
-    password=get_config().db_password,
-    host=get_config().db_host,
-    port=get_config().db_port,
-    database=get_config().db_name
+    username=config.DB_USERNAME,
+    password=config.DB_PASSWORD,
+    host=config.DB_HOST,
+    port=config.DB_PORT,
+    database=config.DB_NAME
 )
-
 
 engine = create_engine(url_object)
 

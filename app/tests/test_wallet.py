@@ -8,7 +8,7 @@ from app.database import Wallet, TransferLog
 from app.tests import TestingSessionLocal
 from .db_to_test import client, override_get_db
 from .test_user import TestUser
-from ..api.costants import DATETIME_FORMAT
+from ..api.constants import DATETIME_FORMAT
 
 nonexistent_user_id = TestUser.get_nonexistent_user_id()
 

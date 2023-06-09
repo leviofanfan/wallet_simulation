@@ -11,7 +11,8 @@ class Settings(BaseSettings):
     BASE_DIR = os.path.dirname(os.path.abspath(__name__))
     TEST_DIR = os.path.join(BASE_DIR, "tests")
 
-    DB_PASSWORD: str = os.environ.get("DB_PASSWORD")
+    DB_USERNAME: str = os.environ.get("DB_USERNAME", "")
+    DB_PASSWORD: str = os.environ.get("DB_PASSWORD", "")
     HOST: str = os.environ.get("HOST", "localhost")
     PORT: int = os.environ.get("PORT", 3000)
 
@@ -29,3 +30,5 @@ class Settings(BaseSettings):
 @lru_cache()
 def get_config():
     return Settings()
+
+config = get_config()

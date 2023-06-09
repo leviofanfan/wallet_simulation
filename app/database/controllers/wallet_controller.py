@@ -11,8 +11,6 @@ from app.database.models.wallet import Wallet
 from app.currency_api import Controller
 
 
-
-
 class WalletController:
 
     def __init__(self, db: Session):

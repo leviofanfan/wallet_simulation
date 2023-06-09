@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS "TransferLog"(
     "receiver" VARCHAR(16) NOT NULL,
     "currency_sent" VARCHAR(3) NOT NULL,
     "currency_received" VARCHAR(3) NOT NULL,
-    "money_sent" FLOAT NOT NULL,
+    "money_sent" FLOAT(2) NOT NULL,
     "money_received" FLOAT NOT NULL,
     "paid_on" TIMESTAMP DEFAULT now()
 );
