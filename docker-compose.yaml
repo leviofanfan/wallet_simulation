@@ -15,7 +15,7 @@ services:
       - POSTGRES_USER=${DB_USERNAME}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     volumes:
-      - /home/aolifir/projects/db_data/db_project/:/var/lib/postgresql/data
+      - ./:/var/lib/postgresql/data
     ports:
       - "${DB_PORT}:${DB_PORT}"
 #  pgsql:
