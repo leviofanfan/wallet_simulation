@@ -3,8 +3,6 @@ version: "3"
 services:
   web:
     build: .
-#    ports:
-#      - "8000:5000"
     volumes:
       - .:/app
   connect:
@@ -16,14 +14,5 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     volumes:
       - .:/var/lib/postgresql/data
-#    ports:
-#      - "${DB_PORT}:${DB_PORT}"
-#  pgsql:
-#    container_name: client_db
-#    image: postgres:11.8
-#    environment:
-#      - POSTGRES_DB=${DB_NAME}
-#      - POSTGRES_USER=${DB_USERNAME}
-#      - POSTGRES_PASSWORD=${DB_PASSWORD}
-#    volumes:
-#      - /home/aolifir/projects/online_wallet/:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:${DB_PORT}"
