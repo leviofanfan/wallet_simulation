@@ -2,9 +2,9 @@ version: "3"
 
 services:
   web:
-    build: app
-    ports:
-      - "8000:5000"
+    build: .
+#    ports:
+#      - "8000:5000"
     volumes:
       - .:/app
   connect:
@@ -15,9 +15,9 @@ services:
       - POSTGRES_USER=${DB_USERNAME}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     volumes:
-      - ./:/var/lib/postgresql/data
-    ports:
-      - "${DB_PORT}:${DB_PORT}"
+      - .:/var/lib/postgresql/data
+#    ports:
+#      - "${DB_PORT}:${DB_PORT}"
 #  pgsql:
 #    container_name: client_db
 #    image: postgres:11.8

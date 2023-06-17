@@ -1,10 +1,8 @@
 import os
 from functools import lru_cache
 
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from pydantic import BaseSettings
-
-load_dotenv()
 
 
 class Settings(BaseSettings):
@@ -14,7 +12,7 @@ class Settings(BaseSettings):
     DB_USERNAME: str = os.environ.get("DB_USERNAME", "")
     DB_PASSWORD: str = os.environ.get("DB_PASSWORD", "")
     HOST: str = os.environ.get("HOST", "localhost")
-    PORT: int = os.environ.get("PORT", 3000)
+    PORT: int = os.environ.get("PORT", 8000)
 
     DB_HOST: str = os.environ.get("HOST", "localhost")
     DB_PORT: int = os.environ.get("DB_PORT", 5432)
