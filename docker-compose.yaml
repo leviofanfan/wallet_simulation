@@ -5,6 +5,8 @@ services:
     build: .
     volumes:
       - .:/app
+      - /app/venv
+
   connect:
     container_name: db
     image: postgres:11.8
