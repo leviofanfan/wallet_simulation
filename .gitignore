@@ -9,6 +9,8 @@ smth_important
 .git/
 # Byte-compiled / optimized Python files
 __pycache__/
+../__pycache__/
+../../__pycache__/
 *.py[cod]
 
 # C extensions
@@ -48,9 +50,9 @@ __pypackages__/
 
 # Logs
 *.log
-
 # macOS files
 .DS_Store
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+data
